@@ -730,17 +730,17 @@
 					"../../JuceLibraryCode",
 					"../../JuceLibraryCode/modules",
 					"/usr/local/include",
-					"/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/include/python3.7m",
+					"/usr/local/Cellar/python@3.8/3.8.2/Frameworks/Python.framework/Versions/3.8/include/python3.8",
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"/usr/local/lib\"",
-					"\"/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib\"",
+					"\"/usr/local/Cellar/python@3.8/3.8.2/Frameworks/Python.framework/Versions/3.8/lib\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "-shared -lpython3.7m -lboost_python38";
+				OTHER_LDFLAGS = "-shared -lpython3.8 -lboost_python38";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RenderMan;
 				PRODUCT_NAME = "librenderman.so";
 				USE_HEADERMAP = NO;
@@ -786,7 +786,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CPLUSPLUSFLAGS = "-fPIC";
-				OTHER_LDFLAGS = "-shared -lpython3.7m -lboost_python38";
+				OTHER_LDFLAGS = "-shared -lpython3.8 -lboost_python38";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.RenderMan;
 				PRODUCT_NAME = "librenderman.so";
 				USE_HEADERMAP = NO;
