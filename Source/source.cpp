@@ -204,6 +204,7 @@ BOOST_PYTHON_MODULE(librenderman)
 
     class_<RenderEngineWrapper>("RenderEngine", init<int, int, int>())
     .def("load_preset", &RenderEngineWrapper::loadPreset)
+    .def("save_preset", &RenderEngineWrapper::savePreset)
     .def("load_plugin", &RenderEngineWrapper::loadPlugin)
     .def("get_patch", &RenderEngineWrapper::wrapperGetPatch)
     .def("set_patch", &RenderEngineWrapper::wrapperSetPatch)

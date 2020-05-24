@@ -13,10 +13,28 @@
 bool RenderEngine::loadPreset (const std::string& path)
 {
     MemoryBlock mb;
-    File file = File(path);
-    file.loadFileAsData(mb);
+    File file = File (path);
+    file.loadFileAsData (mb);
     bool loaded = VSTPluginFormat::loadFromFXBFile (plugin, mb.getData(), mb.getSize());
     return loaded;
+}
+
+//==============================================================================
+bool RenderEngine::savePreset (const std::string& path)
+{
+    MemoryBlock mb;
+    bool saved = VSTPluginFormat::saveToFXBFile (plugin, mb, false);
+    if (saved) {
+        File file = File (path);
+        if (file.existsAsFile()) {
+            file.deleteFile();
+        }
+        file.create();
+        FileOutputStream fos (file);
+        fos.write (mb.getData(), mb.getSize());
+        fos.flush();
+    }
+    return saved;
 }
 
 //==============================================================================

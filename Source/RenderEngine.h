@@ -51,6 +51,8 @@ public:
 
     bool loadPreset (const std::string& path);
 
+    bool savePreset (const std::string& path);
+
     bool loadPlugin (const std::string& path);
 
     void setPatch (const PluginPatch patch);
